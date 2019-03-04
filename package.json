@@ -1,0 +1,27 @@
+{
+  "name": "fav_songs_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SethMcbay/project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SethMcbay/project2/issues"
+  },
+  "homepage": "https://github.com/SethMcbay/project2#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.17",
+    "morgan": "^1.9.1"
+  }
+}
