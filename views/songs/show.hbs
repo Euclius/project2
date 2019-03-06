@@ -1,0 +1,18 @@
+<div>Name: {{songs.name}}</div>
+<div>Genre: {{songs.genre}}</div>
+<div><a href="/users/{{userId}}/items">Back to {{userName}}'s Items</a></div>
+<a href="/songs/{{songs._id}}/edit">
+    <button>Edit</button>
+</a>
+<form action="">
+    <button>Delete</button>
+     <form class="delete-form"action="/{{songs_.id}}?_method=DELETE" method="POST"></form>
+</form>
+
+<a href="/songs/{{songs._id}}/songs/show"><button> See song</button></a>
+
+<h1>Songs</h1>
+{{#each radiostations.songs}}
+    <div><a href="/songs/{{song._id}}/show">{{title}}</a></div>
+    <div>{{artist}}</div>
+{{/each}}

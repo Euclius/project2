@@ -8,3 +8,11 @@
     <button>Delete</button>
      <form class="delete-form"action="/{{radiostations_.id}}?_method=DELETE" method="POST"></form>
 </form>
+
+<a href="/radios/{{radiostations._id}}/songs"><button>See station's songlist</button></a>
+
+<h1>Songs</h1>
+{{#each radiostations.songs}}
+    <div>{{title}}</div>
+    <div>{{artist}}</div>
+{{/each}}
