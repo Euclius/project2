@@ -22,8 +22,16 @@ const songController = {
         })
     },
     show: (req, res) => {
-        Song.findById(req.params.radioId).then(songs => {
-            res.render('songs/show', { songs , radioId: req.params.radioId})
+        // Song.findById(req.params.songId)
+        // .then(song => {
+        //     console.log(song)
+        //     res.render('songs/show', { song , radioId: req.params.radioId})
+        // })
+        RadioStation.findById(req.params.radioId)
+        .then(radio => {
+            const song = radio.songs.id(req.params.songId)
+            console.log(song)
+            res.render('songs/show', { song , radioId: req.params.radioId})
         })
     },
     edit: (req, res) => {

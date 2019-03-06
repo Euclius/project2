@@ -16,10 +16,10 @@ router.delete('/radios/:radioId', radioController.delete)
 //song routes
 // router.get('/')
 router.get('/radios/:radioId/songs', songController.index)
-router.get('/radios/:radioId/songs/:songId', songController.show)
 router.get('/radios/:radioId/songs/new', songController.new)
+router.get('/radios/:radioId/songs/:songId', songController.show)
 router.post('/radios/:radioId/songs', songController.create)
-router.get('/radios/:radioId/songs/edit', songController.edit)
+router.get('/radios/:radioId/songs/:songId/edit', songController.edit)
 router.put('/radios/:radioId/songs', songController.update)
 router.delete('/radios/:radioId/songs', songController.delete)
 

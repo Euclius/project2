@@ -1,5 +1,5 @@
 const mongoose = require('./connection')
-const {Song, RadioStation} = require('../models/radio.js/index.js')
+const {Song, RadioStation} = require('../models/radio.js')
 
 const buttHash = new Song ({
     title: 'Butt Hash',
@@ -126,7 +126,8 @@ RadioStation.deleteMany({})
     .then(() => RadioStation.create(wkrp))
     .then(() => console.log('wkrp has been seeded'))
     .then(() => RadioStation.create(wras))
-    .then(() => Station.create(wrtt))
+    .then(() => RadioStation.create(wrtt))
     .then(() => RadioStation.create(wrek))
+    .then(() => Song.create([buttHash, dontGoBreakinMyHeart, toRamona, theGrandTour, chelseaGirl, lookOnDownFromTheBridge, wildHorses, goinHome, northernSky, imTryingToBeTheManYouNeed, iKnowItsOver, famousBlueRaincoat, awake, flirtedWithYouAllMyLife, empty]))
     .then(() => mongoose.connection.close())
     

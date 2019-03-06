@@ -28,13 +28,13 @@ const radioController = {
     },
     update: (req, res) => {
         RadioStation.findByIdAndUpdate(req.params.radioId, req.body, { new: true }).then(() => {
-            res.redirect(`/${req.params}`)
+            res.redirect(`/radios/${req.params.radioId}`)
         })
     },
     delete: (req, res) => {
-        RadioStation.findByIdAndDelete(req.params).then(() => {
+        RadioStation.findByIdAndDelete(req.params.radioId).then(() => {
             console.log(`Deleted radiostation with the id of ${req.params}`)
-            res.redirect('/')
+            res.redirect('/radios')
         })
     }
 }

@@ -1,18 +1,20 @@
-<div>Name: {{songs.name}}</div>
-<div>Genre: {{songs.genre}}</div>
-<div><a href="/users/{{userId}}/items">Back to {{userName}}'s Items</a></div>
-<a href="/songs/{{songs._id}}/edit">
-    <button>Edit</button>
+<div>Name: {{song.title}}</div>
+<div>Year: {{song.year}}</div>
+<div>Genre: {{song.genre}}</div>
+<div>Artist: {{song.artist}}</div>
+<div><a href="/radios">Back to radio stations</a></div>
+<a href="/songs/{{song._id}}/edit">
+    {{!-- <button>Edit</button> --}}
 </a>
 <form action="">
     <button>Delete</button>
      <form class="delete-form"action="/{{songs_.id}}?_method=DELETE" method="POST"></form>
 </form>
 
-<a href="/songs/{{songs._id}}/songs/show"><button> See song</button></a>
+{{!-- <a href="/songs/{{song._id}}/songs/show"><button>See songs</button></a> --}}
 
-<h1>Songs</h1>
+
 {{#each radiostations.songs}}
-    <div><a href="/songs/{{song._id}}/show">{{title}}</a></div>
+    <div><a href="/radios/:radioId/songs/:songId{{song._id}}/show">{{title}}</a></div>
     <div>{{artist}}</div>
 {{/each}}

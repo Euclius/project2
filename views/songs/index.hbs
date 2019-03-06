@@ -1,7 +1,8 @@
-<h1>hello</h1>
-<div>
+<h1>Check out these Songs</h1>
+
+<div>    
 {{#each songs}}
-<a href="/radios/{{radioId}}/song/{{id}}">CLICK ME</a>
+<a href="/radios/{{../radio._id}}/songs/{{id}}">CLICK ME</a>
     <h2>{{title}}</h2>
     <h3>{{artist}}</h3>
     <h3>{{genre}}</h3>
