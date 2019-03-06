@@ -1,0 +1,17 @@
+<h1> Radio Stations</h1>
+<a href="/radios/new">
+<button>Add new radio station</button>
+</a>
+<ul>
+    {{#each radiostations}}
+    <a href="/radios/{{id}}">
+        <h3>{{name}}</h3>
+    </a>
+    <h4>{{genre}}</h4>
+    {{#each songs}}
+    <h5>{{title}}</h5>
+    <h6>{{artist}}</h6>
+    {{/each}}
+    {{/each}}
+
+</ul>
