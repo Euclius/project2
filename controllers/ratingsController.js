@@ -1,4 +1,4 @@
-const { Song, RadioStation, Rating } = require('../models/radio')
+const { Songs, RadioStation, Ratings } = require('../models/radio')
 
 const ratingsController = {
     index: (req, res) => {
@@ -10,7 +10,7 @@ const ratingsController = {
         })
     },
     new: (req, res) => {
-        res.render('songs/ratings/new')
+        res.render('ratings/new')
     },
     show: (req, res) => {
         Ratings.findById(req.params.ratingsId)
@@ -27,11 +27,9 @@ const ratingsController = {
     },
 
     delete: (req, res) => {
-        Ratings.findByIdAndDelete(req.params).then(() => {
+        Ratings.findByIdAndDelete(req.params.ratingId).then(() => {
             console.log(`Delete ratings with the id of ${req.params}`)
             res.redirect('/radiostations')
-
-
         })
     }
 }

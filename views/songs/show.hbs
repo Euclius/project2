@@ -6,14 +6,13 @@
 <h2>Rating</h2>
 <div>
 {{#each song.rating}}
-    <div>{{rating.rating}}</div>
+    <div>{{rating.rating}} 
 {{/each}}
-</div>
-{{!-- <form action="">
-    <button>Delete</button>
-     <form class="delete-form"action="/{{songs_.id}}?_method=DELETE" method="POST"></form>
-</form> --}}
+</div> 
 
-{{!-- <a href="/songs/{{song._id}}/songs/show"><button>See songs</button></a> --}}
+ <form action="/radios/{{radioId}}/songs/{{song._id}}/ratings?_method=DELETE" method="POST">
+     <input class="button" type="submit" value="Delete">
+</form>
+ 
 
 
