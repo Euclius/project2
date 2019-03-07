@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const radioController = require("../controllers/radioController.js")
 const songController = require("../controllers/songController.js")
+const ratingsController = require("../controllers/ratingsController.js")
 
 
 // router.get('/')
@@ -23,7 +24,11 @@ router.get('/radios/:radioId/songs/:songId/edit', songController.edit)
 router.put('/radios/:radioId/songs', songController.update)
 router.delete('/radios/:radioId/songs', songController.delete)
 
-//ratings routes//
+//ratings routes
+
+router.get('/radios/:radioId/songs/:songId/ratings', ratingsController.index)
+
+
 
 
 
