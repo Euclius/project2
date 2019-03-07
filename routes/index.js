@@ -23,6 +23,9 @@ router.get('/radios/:radioId/songs/:songId/edit', songController.edit)
 router.put('/radios/:radioId/songs', songController.update)
 router.delete('/radios/:radioId/songs', songController.delete)
 
+//ratings routes//
+
+
 
 
 

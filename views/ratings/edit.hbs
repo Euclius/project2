@@ -1,0 +1,10 @@
+<form action="/radios/{{radiostations._id}}?_method=PUT" method="POST">
+    <label for="name">NAME</label>
+    <input type="text" name="name" value="{{radiostations.name}}">
+    <label for="genre">GENRE</label>
+    <input type="text" name="genre" value="{{radiostations.genre}}">
+    <button type="submit">Submit</button>
+</form>
+<a href="/radios/{{radiostations._id}}">
+    <button>Cancel</button>
+</a>
