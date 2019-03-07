@@ -35,7 +35,7 @@ const ratingsController = {
     delete: (req, res) => {
         Rating.findByIdAndDelete(req.params.ratingId).then(() => {
             console.log(`Delete ratings with the id of ${req.params}`)
-            res.redirect('/radiostations')
+            res.redirect(`/radios/${req.params.radioId}/songs/${req.params.songId}/ratings`)
         })
     }
 }

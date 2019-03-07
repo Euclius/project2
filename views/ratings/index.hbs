@@ -1,7 +1,15 @@
-<div>hey</div>
+
 <a href="/radios/{{radioId}}/songs/{{songId}}/ratings/new">
 <button>Add rating</button>
+<form action="/radios/{{radioId}}/songs/{{songId}}/ratings/?_method=DELETE" method="POST">
+	<button>Delete</button>
+</form>
+<div><a href="/radios">Back to radio stations</a></div>
 </a>
 {{#each rating}}
-    <div>{{rating}}</div>
+    <div>{{rating}}
+        <form action="/radios/{{../radioId}}/songs/{{../songId}}/ratings/{{id}}?_method=DELETE" method="POST">
+            <button type="submit" value="x">x</button>
+        </form>
+    </div>
 {{/each}}
