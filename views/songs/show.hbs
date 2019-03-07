@@ -3,16 +3,17 @@
 <div>Genre: {{song.genre}}</div>
 <div>Artist: {{song.artist}}</div>
 <div><a href="/radios">Back to radio stations</a></div>
-<h2>Rating</h2>
+<h2><a href="/radios/{{radioId}}/songs/{{song._id}}/ratings/{{ratingId}}">Rating</a></h2>
 <div>
-{{#each song.rating}}
-    <div>{{rating.rating}} 
-{{/each}}
-</div> 
+    {{!-- <div><a href="/radios/{{radioId}}/songs/{{song._id}}/ratings/{{song.rating._id}}">{{song.rating.rating}}</a><div> --}}
 
+
+{{!-- <button class="add-review">Add review</button>
  <form action="/radios/{{radioId}}/songs/{{song._id}}/ratings?_method=DELETE" method="POST">
      <input class="button" type="submit" value="Delete">
-</form>
+</form> --}}
+ 
+
  
 
 

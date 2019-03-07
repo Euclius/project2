@@ -1,6 +1,5 @@
-<form action="/ratings" method="POST">
-    <input type="text" name="name">
-    <input type="text" name="genre">
+<form action="/radios/{{radioId}}/songs/{{songId}}/ratings" method="POST">
+    <input type="text" name="rating" placeholder="rating">
     <button type="submit">Submit</button>
 </form>
 <a href="/ratings">

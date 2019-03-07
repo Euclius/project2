@@ -25,11 +25,10 @@ router.put('/radios/:radioId/songs', songController.update)
 router.delete('/radios/:radioId/songs', songController.delete)
 
 //ratings routes
-
 router.get('/radios/:radioId/songs/:songId/ratings', ratingsController.index)
+router.get('/radios/:radioId/songs/:songId/ratings/new', ratingsController.new)
 router.get('/radios/:radioId/songs/:songId/ratings/:ratingId', ratingsController.show)
-router.get('/radios/:radioId/songs/new', songController.new)
-router.post('/radios/:radioId/songs/ratings', ratingsController.create)
+router.post('/radios/:radioId/songs/:songId/ratings', ratingsController.create)
 router.delete('/radios/:radioId/songs/:songId/ratings/:ratingId', ratingsController.delete)
 
 
