@@ -27,7 +27,7 @@ const songController = {
         //     console.log(song)
         //     res.render('songs/show', { song , radioId: req.params.radioId})
         // })
-        RadioStation.findById(req.params.radioId)
+        RadioStation.findById(req.params.radioId).populate("ratings")
         .then(radio => {
             const song = radio.songs.id(req.params.songId)
             console.log(song)
