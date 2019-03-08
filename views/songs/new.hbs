@@ -1,7 +1,11 @@
-<form action="/songs" method="POST">
+<form action="/radios/{{radioId}}/songs" method="POST">
 <label for="song">Song</label>
-    <input type="text" name="name">
- <label for="Artist">Artist</label>   
+    <input type="text" name="title">
+ <label for="Genre">Genre</label>   
     <input type="text" name="genre">
+     <label for="Artist">Artist</label>   
+    <input type="text" name="artist">
+     <label for="Year">Year</label>   
+    <input type="text" name="year">
     <button type="submit">Submit</button>
 </form>

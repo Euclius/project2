@@ -14,12 +14,15 @@ const songController = {
             })
     },
     new: (req, res) => {
-        res.render('songs/new')
+        res.render('songs/new', {radioId: req.params.radioId})
     },
     create: (req, res) => {
-        RadioStation.findById(req.params.radioId)
-        Song.create(req.body).then(songs => {
-            res.redirect('/songs')
+        RadioStation.findById(req.params.radioId).then((radio) => {
+            Song.create(req.body).then(song => {
+                radio.songs.push(song)
+                radio.save()
+                res.redirect(`/radios/${req.params.radioId}/songs`)
+            }).catch(err => console.log(err))
         })
     },
     show: (req, res) => {
@@ -50,7 +53,7 @@ const songController = {
         RadioStation.findById(req.params.radioId).then((radio) => {
             const song = radio.songs.id(req.params.songId).remove()
             radio.save()
-            res.redirect('/songs')
+            res.redirect(`/radios/${req.params.radioId}/songs`)
         })
     }
 }
