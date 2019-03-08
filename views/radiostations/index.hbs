@@ -8,19 +8,21 @@
 </div> --}}
 
 
-<h1> Radio Stations</h1>
+<h1 class="radio-title"> Radio Stations</h1>
 <a href="/radios/new">
-    <button>Add new radio station</button>
+    <button class="btn btn-primary btn-lg">Add new radio station</button>
 </a>
-<ul>
+<ul class="card-flex">
     {{#each radiostations}}
-        <li class="card" style="width: 18em;">
-            <div class="card-body">
+    <div class="card card-tile" style="width: 25em;">
+        <div class="card-body">
+        <li>
                 <h5 class="card-title">
                     <a href="/radios/{{id}}">{{name}}</a>
                 </h5>
-                <p class="card-text">{{genre}}</p>
-            </div>          
+                <p class="card-text">{{genre}}</p>     
         </li>
+        </div>
+    </div>
     {{/each}}
 </ul>

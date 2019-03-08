@@ -1,13 +1,17 @@
 <a href="/radios/{{radio._id}}/songs/new">
-    <button>Add new song</button>
+    <button class="btn btn-primary btn-lg add-song">Add new song</button>
 </a>
 <div>    
 {{#each songs}}
+<div class="card song-parent">
+    <div class="card-body song-flex">
 <a href="/radios/{{../radio._id}}/songs/{{id}}">CLICK ME</a>
     <h2>{{title}}</h2>
     <h3>{{artist}}</h3>
     <h3>{{genre}}</h3>
     <h3>{{year}}</h3>
+    </div>
+    </div>
 {{/each}}
 </div>
 

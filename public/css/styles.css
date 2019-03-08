@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://farm8.staticflickr.com/7803/33443644028_8e7f37542d_k.jpg');
+    height: 600px;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.card-tile {
+    margin: 1vw;
+}
+
+.song-flex {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.song-parent {
+    margin-bottom: 1vw;
+}
+
+.add-song {
+    margin: 2vw 0 2vw 0;
+}
+
+.radio-title {
+    text-align: center;
+    font-size: 8vw;
+    color: whitesmoke;
+}
+
+li {
+    list-style-type: none;
+}
