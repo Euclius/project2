@@ -1,15 +1,18 @@
-<div>Name: {{radiostations.name}}</div>
-<div>Genre: {{radiostations.genre}}</div>
-<div><a href="/radios">Back to radio stations</a></div>
-<a href="/radios/{{radiostations._id}}/edit">
-    <button>Edit</button>
+<div class="radio-flex">
+<div><h1 class="radio-titles">{{radiostations.name}}</h1></div>
+<div><h3 class="radio-sub">Genre: {{radiostations.genre}}</h3></div>
+<a href="/radios">Back to radio stations</a>
+<div class="button-flex">
+<a class="radio-buttons" href="/radios/{{radiostations._id}}/edit">
+    <button class="btn btn-primary btn-lg">Edit</button>
 </a>
-<form action="{{radiostations._id}}?_method=DELETE" method="POST">
-     <input class="button" type="submit" value="Delete">
+<form class="radio-buttons" action="{{radiostations._id}}?_method=DELETE" method="POST">
+     <input class="button btn btn-danger btn-lg" type="submit" value="Delete">
 </form>
+</div>
 
-<a href="/radios/{{radiostations._id}}/songs"><button>See station's songlist</button></a>
-
+<a href="/radios/{{radiostations._id}}/songs"><button class="song-list">See station's songlist</button></a>
+</div>
 {{!-- <h1>Songs</h1>
 {{#each radiostations.songs}}
     <div>{{title}}</div>

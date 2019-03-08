@@ -42,3 +42,56 @@ body {
 li {
     list-style-type: none;
 }
+
+.radio-flex, .song-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.radio-buttons {
+    margin: 1vw;
+}
+
+.radio-titles {
+    color: whitesmoke;
+    font-size: 5vw;
+}
+
+.radio-sub {
+    font-size: 3vw;
+    color: whitesmoke;
+}
+
+.song-list {
+    border-radius: 5%;
+    color: white;
+    background-color: black;
+}
+
+.song-list:hover {
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.song-info {
+    color: whitesmoke;
+}
+
+.rating-link {
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin: 1vw;
+}
+
+.song-link-header {
+    margin: 0;
+    padding: 1vw;
+}

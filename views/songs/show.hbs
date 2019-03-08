@@ -1,13 +1,17 @@
-<div>Name: {{song.title}}</div>
-<div>Year: {{song.year}}</div>
-<div>Genre: {{song.genre}}</div>
-<div>Artist: {{song.artist}}</div>
+<div class="song-flex">
+<div><h1 class="song-info">{{song.title}}</h1></div>
+<div><h3 class="song-info">{{song.year}}</h3></div>
+<div><h3 class="song-info">{{song.genre}}</h3></div>
+<div><h3 class="song-info">{{song.artist}}</h3></div>
 <div><a href="/radios">Back to radio stations</a></div>
-<h2><a href="/radios/{{radioId}}/songs/{{song._id}}/ratings/{{ratingId}}">Rating</a></h2>
+<div class="rating-link">
+<h3 class="song-link-header"><a href="/radios/{{radioId}}/songs/{{song._id}}/ratings/{{ratingId}}">Rate Me</a></h3>
+</div>
 <div>
  <form action="/radios/{{radioId}}/songs/{{song._id}}?_method=DELETE" method="POST">
-     <input class="button" type="submit" value="Delete">
+     <input class="button btn btn-danger btn-lg" type="submit" value="Delete">
 </form> 
+</div>
  
  
 
