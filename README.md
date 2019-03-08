@@ -2,6 +2,18 @@
 
 The Radio App lets you choose a radio station or add your own radio station where you can see the radio stations song list or add you're own. As you see a song you can click on it and rate you're song. You can add or delete a rating as you see fit.
 
+## Tech Used
+express
+node
+mongo
+mongoose
+bootstrap
+css
+javascript
+html
+
+
+
 
 
 
