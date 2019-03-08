@@ -1,17 +1,26 @@
+{{!-- <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> --}}
+
+
 <h1> Radio Stations</h1>
 <a href="/radios/new">
-<button>Add new radio station</button>
+    <button>Add new radio station</button>
 </a>
 <ul>
     {{#each radiostations}}
-    <a href="/radios/{{id}}">
-        <h3>{{name}}</h3>
-    </a>
-    <h4>{{genre}}</h4>
-    {{!-- {{#each songs}}
-    <h5>{{title}}</h5>
-    <h6>{{artist}}</h6>
-    {{/each}} --}}
+        <li class="card" style="width: 18em;">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="/radios/{{id}}">{{name}}</a>
+                </h5>
+                <p class="card-text">{{genre}}</p>
+            </div>          
+        </li>
     {{/each}}
-
 </ul>

@@ -1,5 +1,6 @@
-<h1>Check out these Songs</h1>
-
+<a href="/radios/{{radio._id}}/songs/new">
+    <button>Add new song</button>
+</a>
 <div>    
 {{#each songs}}
 <a href="/radios/{{../radio._id}}/songs/{{id}}">CLICK ME</a>
@@ -9,3 +10,4 @@
     <h3>{{year}}</h3>
 {{/each}}
 </div>
+

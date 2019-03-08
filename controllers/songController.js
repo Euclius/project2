@@ -17,6 +17,7 @@ const songController = {
         res.render('songs/new')
     },
     create: (req, res) => {
+        RadioStation.findById(req.params.radioId)
         Song.create(req.body).then(songs => {
             res.redirect('/songs')
         })
@@ -46,9 +47,10 @@ const songController = {
         })
     },
     delete: (req, res) => {
-        Song.findByIdAndDelete(req.params).then(() => {
-            console.log(`Delete songs with the id of ${req.params}`)
-            res.redirect('/')
+        RadioStation.findById(req.params.radioId).then((radio) => {
+            const song = radio.songs.id(req.params.songId).remove()
+            radio.save()
+            res.redirect('/songs')
         })
     }
 }
