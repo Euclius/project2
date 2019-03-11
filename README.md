@@ -18,7 +18,7 @@ html
 
 
 ## Heroku deployed site
-https://dashboard.heroku.com/apps/salty-journey-83482
+https://salty-journey-83482.herokuapp.com/
 
 
 ## Trello board
