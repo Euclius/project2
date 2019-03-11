@@ -11,7 +11,7 @@ const express = require("express")
         app.set("view engine", "hbs") 
         app.use(express.static(__dirname + "/public"))
         app.use(logger("dev"))
-        app.use('/radios', routes)
+        app.use('/', routes)
 
         const PORT = process.env.PORT || 3001
         app.listen(PORT, () => {
