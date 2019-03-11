@@ -6,7 +6,7 @@ const ratingsController = require("../controllers/ratingsController.js")
 
 
 // router.get('/')
-router.get('/radios', radioController.index)
+router.get('/radiostations', radioController.index)
 router.get('/radios/new', radioController.new)
 router.post('/radios', radioController.create)
 router.get('/radios/:radioId/edit', radioController.edit)
